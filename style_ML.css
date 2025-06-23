@@ -1,0 +1,133 @@
+/*
+  CSCI 355 - Internet and Web Technologies
+  style_ML.css
+  Summer 2025 - June 21
+
+  Assignment 8 - Basic Webpage
+  Author: Monika Luchowska  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: teal;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Seashell_pattern_cartoon.png');
+  background-repeat: repeat;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: navy;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: darkslategray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-bar > li {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-bar a, .nav-bar li {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: darkcyan;
+  list-style: none;
+  padding: 0;
+  min-width: 180px;
+  z-index: 1;
+}
+
+.nav-bar li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid teal;
+}
+
+.dropdown li:hover {
+  background-color: teal;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.fancy-hover {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.fancy-hover:hover {
+  transform: scale(1.05);
+  background-color: darkturquoise;
+}
+
+.content-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#passwordInput {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.bio-pic {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+form input, form textarea {
+  display: block;
+  width: 90%;
+  padding: 8px;
+  margin: 10px auto;
+}
+
+form input[type="submit"] {
+  background-color: steelblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: skyblue;
+}
